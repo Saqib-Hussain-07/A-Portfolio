@@ -1,79 +1,116 @@
-import { useRef } from 'react';
-import Image from 'next/image';
-import { gsap } from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { useGSAP } from '@gsap/react';
+import { useRef } from "react";
+import Image from "next/image";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useGSAP } from "@gsap/react";
 
 // Register ScrollTrigger plugin safely
-if (typeof window !== 'undefined') {
+if (typeof window !== "undefined") {
   gsap.registerPlugin(ScrollTrigger);
 }
 
 // Shared MY_STACK object with frontend, backend, database, and tools categories
 export const MY_STACK = {
   frontend: [
-    { name: 'React', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg' },
-    { name: 'Next.js', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg' },
-    { name: 'TypeScript', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg' },
-    { name: 'Tailwind CSS', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg' },
+    {
+      name: "React",
+      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
+    },
+    {
+      name: "Next.js",
+      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg",
+    },
+    {
+      name: "TypeScript",
+      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg",
+    },
+    {
+      name: "Tailwind CSS",
+      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg",
+    },
   ],
   backend: [
-    { name: 'Node.js', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg' },
-    { name: 'Express', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg' },
-    { name: 'NestJS', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nestjs/nestjs-original.svg' },
-    { name: 'Go', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/go/go-original.svg' },
+    {
+      name: "Node.js",
+      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg",
+    },
+    {
+      name: "Express",
+      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg",
+    },
   ],
   database: [
-    { name: 'MongoDB', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg' },
-    { name: 'PostgreSQL', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg' },
-    { name: 'Redis', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redis/redis-original.svg' },
+    {
+      name: "MongoDB",
+      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg",
+    },
+    {
+      name: "PostgreSQL",
+      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg",
+    },
+    {
+      name: "MySQL",
+      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg",
+    },
   ],
   tools: [
-    { name: 'Docker', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg' },
-    { name: 'Git', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg' },
-    { name: 'GitHub Actions', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg' },
+    {
+      name: "Docker",
+      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg",
+    },
+    {
+      name: "Git",
+      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg",
+    },
+    {
+      name: "GitHub Actions",
+      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg",
+    },
   ],
 };
 
 export default function MyStack() {
   const containerRef = useRef(null);
 
-  useGSAP(() => {
-    // 1. Reveal .slide-up items from opacity: 0, y: 40 with a staggered entrance
-    gsap.fromTo(
-      gsap.utils.toArray('.slide-up', containerRef.current),
-      { opacity: 0, y: 40 },
-      {
-        opacity: 1,
-        y: 0,
-        duration: 0.8,
-        ease: 'power3.out',
-        stagger: 0.05,
-        scrollTrigger: {
-          trigger: containerRef.current,
-          start: 'top 80%', // Animates when top of section enters 80% of viewport
-          toggleActions: 'play none none none',
+  useGSAP(
+    () => {
+      // 1. Reveal .slide-up items from opacity: 0, y: 40 with a staggered entrance
+      gsap.fromTo(
+        gsap.utils.toArray(".slide-up", containerRef.current),
+        { opacity: 0, y: 40 },
+        {
+          opacity: 1,
+          y: 0,
+          duration: 0.8,
+          ease: "power3.out",
+          stagger: 0.05,
+          scrollTrigger: {
+            trigger: containerRef.current,
+            start: "top 80%", // Animates when top of section enters 80% of viewport
+            toggleActions: "play none none none",
+          },
         },
-      }
-    );
+      );
 
-    // 2. Fade and lift the whole section upward as it scrolls away (exit animation)
-    gsap.fromTo(
-      containerRef.current,
-      { y: 0, opacity: 1 },
-      {
-        y: -80,
-        opacity: 0,
-        ease: 'power1.inOut',
-        scrollTrigger: {
-          trigger: containerRef.current,
-          start: 'bottom 80%', // Starts fading and moving up when section bottom reaches 80%
-          end: 'bottom 20%',   // Fully fades and reaches max lift by 20%
-          scrub: true,         // Tied directly to scrollbar position
+      // 2. Fade and lift the whole section upward as it scrolls away (exit animation)
+      gsap.fromTo(
+        containerRef.current,
+        { y: 0, opacity: 1 },
+        {
+          y: -80,
+          opacity: 0,
+          ease: "power1.inOut",
+          scrollTrigger: {
+            trigger: containerRef.current,
+            start: "bottom 80%", // Starts fading and moving up when section bottom reaches 80%
+            end: "bottom 20%", // Fully fades and reaches max lift by 20%
+            scrub: true, // Tied directly to scrollbar position
+          },
         },
-      }
-    );
-  }, { scope: containerRef });
+      );
+    },
+    { scope: containerRef },
+  );
 
   return (
     <section
