@@ -38,7 +38,7 @@ const SKILLS = [
       },
       {
         name: "SQL",
-        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sql/sql-original.svg",
+        icon: "https://img.icons8.com/fluency/48/sql.png",
       },
     ],
   },
@@ -55,20 +55,22 @@ const SKILLS = [
         icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg",
       },
       {
-        name: "React",
-        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
+        name: "Tailwind CSS",
+        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg",
       },
+
       {
         name: "Next.js",
         icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg",
+        breakBefore: true,
       },
+      // {
+      //   name: "Bootstrap 5",
+      //   icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg",
+      // },
       {
-        name: "Bootstrap 5",
-        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg",
-      },
-      {
-        name: "Tailwind CSS",
-        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg",
+        name: "React",
+        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
       },
     ],
   },
@@ -81,7 +83,11 @@ const SKILLS = [
       },
       {
         name: "Express",
-        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg",
+        icon: "https://img.icons8.com/nolan/64/express-js.png",
+      },
+      {
+        name: "RestAPI",
+        icon: "https://img.icons8.com/arcade/64/api-settings.png",
       },
     ],
   },
@@ -115,7 +121,7 @@ const SKILLS = [
       },
       {
         name: "GitHub Actions",
-        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg",
+        icon: "https://img.icons8.com/pulsar-gradient/48/github.png",
       },
     ],
   },
@@ -412,12 +418,12 @@ export default function App() {
           .fs-overlay.open{opacity:1;transform:scale(1)}
           .fs-close{position:absolute;top:28px;right:48px;background:none;border:none;color:#555;font-size:2rem;transition:color .2s;line-height:1;font-family:'Inter',sans-serif}
           .fs-close:hover{color:#eee}
-          .fs-nav-item{font-family:'Anton',sans-serif;font-size:clamp(3rem,8vw,6.5rem);color:#2a2a2a;transition:color .25s,letter-spacing .25s;letter-spacing:.02em;line-height:1.05;display:flex;align-items:center;gap:24px}
+          .fs-nav-item{font-family:'Anton',sans-serif;font-size:clamp(3rem,8vw,5.5rem);color:#2a2a2a;transition:color .25s,letter-spacing .25s;letter-spacing:.02em;line-height:1.05;display:flex;align-items:center;gap:24px}
           .fs-nav-item:hover{color:#d8d8d8;letter-spacing:.06em}
-          .fs-nav-num{font-family:'Inter',sans-serif;font-size:.72rem;color:#333;letter-spacing:.12em;transition:color .25s;align-self:flex-start;margin-top:12px}
+          .fs-nav-num{font-family:'Inter',sans-serif;font-size:.60rem;color:#333;letter-spacing:.12em;transition:color .25s;align-self:flex-start;margin-top:12px}
           .fs-nav-item:hover .fs-nav-num{color:${G}}
           .fs-socials{position:absolute;bottom:40px;left:0;right:0;display:flex;justify-content:center;gap:40px}
-          .fs-social-link{font-size:.68rem;color:#383838;letter-spacing:.14em;text-transform:uppercase;transition:color .2s}
+          .fs-social-link{font-size:1.2rem;color:#383838;letter-spacing:.14em;text-transform:uppercase;transition:color .2s}
           .fs-social-link:hover{color:#aaa}
           .top-nav{position:fixed;top:0;left:0;right:0;z-index:200;padding:22px 48px;display:flex;justify-content:space-between;align-items:center;background:linear-gradient(to bottom,rgba(20,20,20,.95),transparent)}
           .hero-section{min-height:100vh;display:flex;align-items:center;padding:0 80px;position:relative}
@@ -465,7 +471,11 @@ export default function App() {
           .skill-row {display: grid;grid-template-columns: 5fr 7fr;gap: 0;align-items: start;}
           .skill-cat {font-family: 'Anton', sans-serif;font-size: clamp(3rem, 7vw, 5rem);color: #c8c8c8;letter-spacing: .04em;line-height: 0.95;padding-top: 2px;transition: color .4s ease;text-transform: uppercase;white-space: nowrap;}
           .skill-row:hover .skill-cat{color:#fff}
-          .skill-grid {display: flex;flex-wrap: wrap;align-items: center;gap: 36px 44px;}
+          .skill-grid{
+    display:grid;
+    grid-template-columns:repeat(3, max-content);
+    gap:36px 44px;
+}
           .skill-item {display: flex;align-items: center;gap: 14px;line-height: 1;cursor: default;transition: all .35s cubic-bezier(.22,1,.36,1);}
           .skill-item:hover{transform:translateY(-2px)}
           .skill-icon {width: 40px;height: 40px;object-fit: contain;flex-shrink: 0;}
