@@ -30,15 +30,15 @@ const SKILLS = [
     items: [
       {
         name: "Java",
-        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg",
+        icon: "/logo/Java.png",
       },
       {
         name: "Javascript",
-        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
+        icon: "/logo/js.png",
       },
       {
         name: "SQL",
-        icon: "https://img.icons8.com/fluency/48/sql.png",
+        icon: "/logo/Sql.png",
       },
     ],
   },
@@ -48,20 +48,20 @@ const SKILLS = [
     items: [
       {
         name: "HTML5",
-        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg",
+        icon: "/logo/Html5.png",
       },
       {
         name: "CSS3",
-        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg",
+        icon: "/logo/Css.png",
       },
       {
         name: "Tailwind CSS",
-        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg",
+        icon: "/logo/tailwind.png",
       },
 
       {
         name: "Next.js",
-        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg",
+        icon: "/logo/next.png",
         breakBefore: true,
       },
       // {
@@ -70,7 +70,7 @@ const SKILLS = [
       // },
       {
         name: "React",
-        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
+        icon: "/logo/react.png",
       },
     ],
   },
@@ -79,15 +79,15 @@ const SKILLS = [
     items: [
       {
         name: "Node.js",
-        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg",
+        icon: "/logo/node.png",
       },
       {
         name: "Express",
-        icon: "https://img.icons8.com/nolan/64/express-js.png",
+        icon: "/logo/express.png",
       },
       {
         name: "RestAPI",
-        icon: "https://img.icons8.com/arcade/64/api-settings.png",
+        icon: "/logo/RestAPI.png",
       },
     ],
   },
@@ -96,15 +96,15 @@ const SKILLS = [
     items: [
       {
         name: "MongoDB",
-        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg",
+        icon: "/logo/mongodb.svg",
       },
       {
         name: "PostgreSQL",
-        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg",
+        icon: "/logo/postgreSQL.png",
       },
       {
         name: "MySQL",
-        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg",
+        icon: "/logo/mysql.svg",
       },
     ],
   },
@@ -113,15 +113,15 @@ const SKILLS = [
     items: [
       {
         name: "Docker",
-        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg",
+        icon: "/logo/docker.svg",
       },
       {
         name: "Git",
-        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg",
+        icon: "/logo/git.png",
       },
       {
         name: "GitHub Actions",
-        icon: "https://img.icons8.com/pulsar-gradient/48/github.png",
+        icon: "/logo/github.png",
       },
     ],
   },
@@ -471,11 +471,7 @@ export default function App() {
           .skill-row {display: grid;grid-template-columns: 5fr 7fr;gap: 0;align-items: start;}
           .skill-cat {font-family: 'Anton', sans-serif;font-size: clamp(3rem, 7vw, 5rem);color: #c8c8c8;letter-spacing: .04em;line-height: 0.95;padding-top: 2px;transition: color .4s ease;text-transform: uppercase;white-space: nowrap;}
           .skill-row:hover .skill-cat{color:#fff}
-          .skill-grid{
-    display:grid;
-    grid-template-columns:repeat(3, max-content);
-    gap:36px 44px;
-}
+          .skill-grid{display:grid;grid-template-columns:repeat(3, max-content);gap:36px 44px;}
           .skill-item {display: flex;align-items: center;gap: 14px;line-height: 1;cursor: default;transition: all .35s cubic-bezier(.22,1,.36,1);}
           .skill-item:hover{transform:translateY(-2px)}
           .skill-icon {width: 40px;height: 40px;object-fit: contain;flex-shrink: 0;}
@@ -522,7 +518,7 @@ export default function App() {
 
           .quote-mark{font-family:'Anton',sans-serif;font-size:clamp(6rem,14vw,11rem);color:${G};opacity:.1;line-height:.6;display:block;margin-bottom:-.15em;user-select:none;pointer-events:none;letter-spacing:-.05em}
 
-          .side-email{position:fixed;left:-72px;top:50%;transform:translateY(-50%) rotate(-90deg);font-size:.78rem;letter-spacing:.16em;color:#bfbfbf;z-index:50;white-space:nowrap;pointer-events:none;text-shadow:0 0 5px rgba(255,255,255,0.08)}
+          .side-email{position:fixed;left:-72px;top:50%;transform:translateY(-50%) rotate(-90deg);font-size:.72rem;letter-spacing:.16em;color:#bfbfbf;z-index:50;white-space:nowrap;pointer-events:none;text-shadow:0 0 5px rgba(255,255,255,0.08)}
 
           @media(max-width:1024px){
             .hero-grid{grid-template-columns:1fr;gap:32px}
@@ -1099,9 +1095,7 @@ export default function App() {
               color: "#555",
               letterSpacing: ".08em",
             }}
-          >
-            Design & built by Saqib Hussain · {new Date().getFullYear()}
-          </p>
+          ></p>
         </footer>
       </div>
     </ReactLenis>
