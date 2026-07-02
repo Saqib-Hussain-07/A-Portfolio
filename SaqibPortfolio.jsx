@@ -747,37 +747,6 @@ export default function App() {
                 </span>
               </div>
             </div>
-            <div className="gsap-hero hero-stats">
-              {[
-                { n: 2, label: "Years of Coding" },
-                { n: 3, label: "Completed Projects" },
-                { n: 10, s: "K+", label: "Hours Worked" },
-              ].map((s) => (
-                <div key={s.label}>
-                  <div
-                    style={{
-                      fontFamily: "'Anton',sans-serif",
-                      fontSize: "3.2rem",
-                      color: G,
-                      lineHeight: 1,
-                    }}
-                  >
-                    <Counter n={s.n} s={s.s || "+"} />
-                  </div>
-                  <div
-                    style={{
-                      fontSize: ".82rem",
-                      color: "#888",
-                      letterSpacing: ".04em",
-                      marginTop: 6,
-                      fontWeight: 300,
-                    }}
-                  >
-                    {s.label}
-                  </div>
-                </div>
-              ))}
-            </div>
           </div>
           {/* Scroll indicator */}
           <div
