@@ -679,7 +679,7 @@ export default function App() {
                 <strong style={{ color: "#bbb", fontWeight: 500 }}>
                   Saqib
                 </strong>
-                .  I love building full-stack applications that are as clean under the hood as they are simple to use. My focus: scalable architecture, smooth UX, and code that's built to last
+                .  a full-stack developer who's still learning something new with every project. I care about writing clean code, building things that scale, and creating experiences that feel simple to use.
               </p>
               <div
                 className="gsap-hero"
