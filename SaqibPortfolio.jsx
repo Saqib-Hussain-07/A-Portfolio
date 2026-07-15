@@ -679,9 +679,7 @@ export default function App() {
                 <strong style={{ color: "#bbb", fontWeight: 500 }}>
                   Saqib
                 </strong>
-                . An MCA student at LPU passionate about building scalable,
-                real-world applications with clean architecture and intuitive
-                UX.
+                . Hi, I'm Saqib. I love building full-stack applications that are as clean under the hood as they are simple to use. My focus: scalable architecture, smooth UX, and code that's built to last
               </p>
               <div
                 className="gsap-hero"
