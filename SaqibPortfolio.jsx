@@ -11,18 +11,31 @@ import TechSphere from "./TechSphere";
 const PROJECTS = [
   {
     id: "01",
-    name: "CampusConnect",
-    tags: ["PHP 8.0+", "MySQL", "Bootstrap 5", "JavaScript"],
+    name: "HireSense",
+    tags: ["React", "Node.js", "Express", "MongoDB", "Jwt Auth"],
+    image: "/ProjectImage/HireSense.png",
+    link: "",
   },
   {
     id: "02",
-    name: "TypeSprint",
-    tags: ["HTML5", "CSS3", "JavaScript", "Responsive Design"],
+    name: "CampusConnect",
+    tags: ["React", "Node.js", "Express", "MongoDB", "Jwt Auth"],
+    image: "/ProjectImage/CampusConnect.png",
+    link: "https://campus-connect-sigma-six.vercel.app/",
   },
   {
     id: "03",
-    name: "CertGen",
-    tags: ["Python", "Flask", "SQLite", "Docker", "Twilio API"],
+    name: "Type Sprint",
+    tags: [
+      "HTML5",
+      "CSS3",
+      "JavaScript (ES6+)",
+      "Chart.js",
+      "Web Audio API",
+      "Local Storage",
+    ],
+    image: "/ProjectImage/TypeSprint.png",
+    link: "https://saqib-hussain-07.github.io/Type-Sprint/",
   },
 ];
 
